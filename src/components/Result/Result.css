@@ -4,12 +4,13 @@
 }
 
 .result__title {
+  color: rgb(60, 2, 114);
   margin: 0 auto;
   padding: 20px;
   border-radius: 20px;
   justify-content: center;
   font-size: 40px;
   width: fit-content;
-  background-color: rgb(138, 29, 247);
-  text-shadow: 2px 1px 1px rgb(173, 94, 252);
+  background-color: rgba(138, 29, 247, 0.9);
+  text-shadow: 1px 1px 1px rgba(253, 240, 240, 0.8);
 }
