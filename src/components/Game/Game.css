@@ -1,0 +1,66 @@
+.game {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  text-align: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background-image: url('../../../img/fon.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.game:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.8);
+  z-index: 2;
+}
+
+.game__content {
+  position: relative;
+  z-index: 3;
+}
+
+.game__title {
+  margin: 0 auto;
+  font-size: 36px;
+  text-shadow: 2px 1px 1px rgb(173, 94, 252);
+}
+
+.game__answers {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.game__answer-btn {
+  margin: 10px;
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+  border: 2px solid rgb(60, 2, 114);
+  background-color: rgb(138, 29, 247);
+  text-shadow: 1px 1px 1px rgb(60, 2, 114);
+  font-size: 24px;
+  width: 400px;
+  padding: 10px 40px;
+}
+
+.game__answer {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.game__score {
+  text-shadow: 2px 1px 1px rgb(173, 94, 252);
+}

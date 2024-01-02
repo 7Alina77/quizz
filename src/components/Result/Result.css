@@ -1,0 +1,15 @@
+.result {
+  position: relative;
+  z-index: 3;
+}
+
+.result__title {
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  justify-content: center;
+  font-size: 40px;
+  width: fit-content;
+  background-color: rgb(138, 29, 247);
+  text-shadow: 2px 1px 1px rgb(173, 94, 252);
+}
