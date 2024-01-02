@@ -25,7 +25,7 @@
 .landing__content {
   position: relative;
   z-index: 3;
-  text-shadow: 1px 1px 1px rgba(253, 240, 240, 0.8);
+  text-shadow: 1px 1px 1px rgba(38, 33, 43, 0.8);
   text-align: center;
 }
 
@@ -33,35 +33,26 @@
 .landing__title {
   margin: 0;
   padding: 0;
-  font-size: 50px;
+  font-size: 70px;
 }
 
 .landing__text {
-  font-size: 34px;
+  font-size: 38px;
 }
 
 .landing__rules {
   margin: 0;
-  font-size: 50px;
+  font-size: 54px;
 }
 
 .landing__list {
-  margin: 20px auto;
+  margin: 30px auto 50px;
   justify-content: center;
   width: fit-content;
   text-align: left;
   font-size: 30px;
 }
 
-.landing__btn {
-  font-family: 'Jura', sans-serif;
-  font-family: 'Permanent Marker', cursive;
-  font-size: 24px;
-  margin: 30px auto;
-  padding: 20px 70px;
-  color: rgb(60, 2, 114);
-  border-radius: 20px;
-  border: 2px solid rgb(60, 2, 114);
-  background-color: rgb(138, 29, 247);
-  box-shadow: 2px 2px 20px 7px rgb(138, 29, 247);
+.landing__item {
+  font-size: 40px;
 }

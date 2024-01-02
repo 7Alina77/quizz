@@ -2,33 +2,27 @@ import React, { useState} from 'react';
 import './Game.css';
 import Result from '../Result/Result';
 import { indexContext } from '../../context/context';
+import Button from '../Button/Button';
 
-function Game({questionsAll}) {
-  const [score, setScore] = useState(0)
+function Game({indexOfContext, handleOnAnswerClick, score, lengthOfQuestionsArray, questionsAll, btnText, onStartBtnClick}) {
   const index = React.useContext(indexContext);
-  const [indexOfContext, setIndexOfContext] = useState(index);
   const question = questionsAll[indexOfContext];
-  const lengthOfQuestionsArray = questionsAll.length;
 
   function onAnswerClick(index) {
-    setIndexOfContext(indexOfContext+1);
-    if(index === question.correct) {
-      setScore(score+1);
-    } else {
-      setScore(score);
-    }
+    handleOnAnswerClick(index);
   }
 
   return (
     <section className='game'>
-      { lengthOfQuestionsArray !== indexOfContext ? 
+      { lengthOfQuestionsArray !== indexOfContext || score === 0 ? 
         <div className='game__content'>
           <h1 className='game__title'>{question.title}</h1>
           <ul className='game__answers'>
           {question.variants.map((item, index) => {
             return (
               <li className='game__answer'>
-                <button onClick={() => onAnswerClick(index)} className='game__answer-btn hover'>{item}</button>
+                <Button btnText={item} onAnswerBtnClick={() => onAnswerClick(index)}></Button>
+                {/* <button onClick={() => onAnswerClick(index)} className='game__answer-btn hover'>{item}</button> */}
               </li>
             )
           })}
@@ -36,7 +30,7 @@ function Game({questionsAll}) {
           <h2 className='game__score'>Your score: {score}</h2>
         </div> 
         : 
-        <Result lengthOfQuestionsArray={lengthOfQuestionsArray} score={score}/>
+        <Result lengthOfQuestionsArray={lengthOfQuestionsArray} score={score} btnText={btnText} onStartBtnClick={onStartBtnClick}/>
       }
     </section>
   )

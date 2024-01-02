@@ -11,19 +11,48 @@ function App() {
   const [isGameStarted, setIsGameStarted] = useState(false);
   const [questionsAll, setQuestionsAll] = useState(questions);
   const [indexOfContext, setIndexOfContext] = useState(index);
+  const [btnText, setBtnText] = useState('Start Now!');
+  const [score, setScore] = useState(0);
+  const question = questionsAll[indexOfContext];
+  const lengthOfQuestionsArray = questionsAll.length;
   
 
   const onStartBtnClick = () => {
+    if(lengthOfQuestionsArray === indexOfContext) {
+      setScore(0);
+      setIndexOfContext(0);
+    }
+    setBtnText('Start now!');
     setIsGameStarted(true);
+  }
+
+  const handleOnAnswerClick = (index) => {
+    if(index === question.correct) {
+      setScore(score+1);
+      setBtnText('Restart game');
+    } else {
+      setScore(score);
+    }
+    setIndexOfContext(indexOfContext+1);
   }
   
   return (
     <indexContext.Provider value={indexOfContext}>
       <div className="App">
         {!isGameStarted ? 
-        <Landing onStartBtnClick={onStartBtnClick}/>
+        <Landing 
+          onStartBtnClick={onStartBtnClick} 
+          btnText={btnText}
+        />
         :
-        <Game questionsAll= {questionsAll}/>
+        <Game indexOfContext={indexOfContext}
+          handleOnAnswerClick={handleOnAnswerClick}
+          score={score} 
+          lengthOfQuestionsArray={lengthOfQuestionsArray} 
+          questionsAll= {questionsAll} 
+          btnText={btnText} 
+          onStartBtnClick={onStartBtnClick}
+         />
         }
       </div>
     </indexContext.Provider>

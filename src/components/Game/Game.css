@@ -32,7 +32,7 @@
 .game__title {
   margin: 0 auto;
   font-size: 36px;
-  text-shadow: 1px 1px 1px rgba(253, 240, 240, 0.8);
+  text-shadow: 1px 1px 1px rgba(38, 33, 43, 0.8);
 }
 
 .game__answers {
@@ -46,11 +46,10 @@
 
 .game__answer-btn {
   margin: 10px;
-  color: rgb(0, 0, 0);
+  color: rgb(41, 1, 79);
   border-radius: 20px;
   border: 2px solid rgb(60, 2, 114);
   background-color: rgb(138, 29, 247);
-  text-shadow: 1px 1px 1px rgba(34, 35, 38, 0.8);
   font-size: 24px;
   width: 400px;
   padding: 10px 40px;
@@ -62,5 +61,5 @@
 }
 
 .game__score {
-  text-shadow: 1px 1px 1px rgba(253, 240, 240, 0.8);
+  text-shadow: 1px 1px 1px rgba(38, 33, 43, 0.8);
 }

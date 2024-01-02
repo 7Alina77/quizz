@@ -1,0 +1,14 @@
+.button__btn {
+  font-family: 'Caveat', cursive;
+  line-height: .7;
+  width: 300px;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 10px auto;
+  padding: 20px 70px;
+  color: rgb(41, 1, 79);
+  border-radius: 20px;
+  border: 2px solid rgb(41, 1, 79);
+  background-color: rgb(138, 29, 247);
+  box-shadow: 2px 2px 15px 3px rgb(138, 29, 247);
+}

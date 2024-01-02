@@ -1,6 +1,7 @@
+import Button from '../Button/Button';
 import '../Landing/Landing.css';
 
-function Landing({onStartBtnClick}) {
+function Landing({onStartBtnClick, btnText}) {
   return (
     <section className='landing'>
       <main>
@@ -13,7 +14,7 @@ function Landing({onStartBtnClick}) {
             <li className='landing__item'>Click the right option and get new question</li>
             <li className='landing__item'>Answer all the questions to win</li>
           </ol>
-          <button onClick={onStartBtnClick} className='landing__btn hover'>Start Now!</button>
+          <Button onStartBtnClick={onStartBtnClick} btnText={btnText} />
         </div>
       </main>
     </section>
