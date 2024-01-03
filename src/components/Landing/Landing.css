@@ -56,3 +56,31 @@
 .landing__item {
   font-size: 40px;
 }
+
+@media screen and (max-width: 1100px) {
+  .landing {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .landing__title {
+    font-size: 50px;
+  }
+
+  .landing__text {
+    font-size: 28px;
+  }
+
+  .landing__rules {
+    font-size: 38px;
+  }
+
+  .landing__list {
+    margin: 20px auto 30px;
+  }
+
+  .landing__item {
+    font-size: 28px;
+  }
+}

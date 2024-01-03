@@ -61,5 +61,6 @@
 }
 
 .game__score {
+  font-size: 26px;
   text-shadow: 1px 1px 1px rgba(38, 33, 43, 0.8);
 }

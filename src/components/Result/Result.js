@@ -1,5 +1,8 @@
+import { Component } from 'react';
 import Button from '../Button/Button';
+import Landing from '../Landing/Landing';
 import './Result.css';
+import {  BrowserRouter, Routes, Route, Link } from 'react-router-dom/dist';
 
 function Result({lengthOfQuestionsArray, score, btnText, onStartBtnClick}) {
   return (

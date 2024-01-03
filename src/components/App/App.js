@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { useState } from 'react';
 import './App.css';
 import questions from '../../constants/constants';

@@ -12,3 +12,10 @@
   background-color: rgb(138, 29, 247);
   box-shadow: 2px 2px 15px 3px rgb(138, 29, 247);
 }
+
+@media screen and (max-width: 360px) {
+  .button__btn {
+    font-size: 26px;
+    width: 250px;
+  }
+}

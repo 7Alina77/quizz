@@ -4,6 +4,7 @@
 }
 
 .result__title {
+  line-height: 1;
   color: rgb(41, 1, 79);
   margin: 0 auto 50px;
   padding: 20px;
@@ -13,4 +14,13 @@
   width: fit-content;
   background-color: rgba(138, 29, 247, 0.9);
   text-shadow: 1px 1px 1px rgba(38, 33, 43, 0.8);
+}
+
+@media screen and (max-width: 360px) {
+  .result__title {
+    padding: 20px 10px;
+    margin-bottom: 30px;
+    font-size: 30px;
+    width: 250px;
+  }
 }
