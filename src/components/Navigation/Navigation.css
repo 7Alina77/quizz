@@ -1,0 +1,22 @@
+.navigation__list {
+  width: fit-content;
+}
+
+.navigation__item {
+  font-size: 40px;
+  color: rgb(124, 14, 234);
+}
+
+.navigation__item:first-child {
+  margin-right: 30px;
+}
+
+@media screen and (max-width: 525px) {
+  .navigation__item {
+    font-size: 28px;
+  }
+
+  .navigation__item:first-child {
+    margin-right: 15px;
+  }
+}

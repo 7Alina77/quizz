@@ -6,6 +6,10 @@
   color: rgb(124, 14, 234);
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
+
 .hover {
   transition: .5s;
 }
@@ -13,4 +17,8 @@
 .hover:hover {
   opacity: .7;
   cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
 }

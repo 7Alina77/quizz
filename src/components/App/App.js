@@ -5,6 +5,9 @@ import questions from '../../constants/constants';
 import {indexContext} from '../../context/context';
 import Game from '../Game/Game';
 import Landing from '../Landing/Landing';
+import { Routes, Route } from 'react-router-dom';
+import Signup from '../Signup/Signup';
+import Navigation from '../Navigation/Navigation';
 
 function App() {
   const index = React.useContext(indexContext);
@@ -22,7 +25,7 @@ function App() {
       setScore(0);
       setIndexOfContext(0);
     }
-    setBtnText('Start now!');
+    setBtnText('Start Now!');
     setIsGameStarted(true);
   }
 
@@ -39,21 +42,24 @@ function App() {
   return (
     <indexContext.Provider value={indexOfContext}>
       <div className="App">
-        {!isGameStarted ? 
-        <Landing 
-          onStartBtnClick={onStartBtnClick} 
-          btnText={btnText}
-        />
-        :
-        <Game indexOfContext={indexOfContext}
-          handleOnAnswerClick={handleOnAnswerClick}
-          score={score} 
-          lengthOfQuestionsArray={lengthOfQuestionsArray} 
-          questionsAll= {questionsAll} 
-          btnText={btnText} 
-          onStartBtnClick={onStartBtnClick}
-         />
-        }
+        <Routes>
+          <Route path="/quizz" element={
+            <Landing 
+              onStartBtnClick={onStartBtnClick} 
+              btnText={btnText}
+            />}
+          />
+          <Route path='/game' element={
+            <Game indexOfContext={indexOfContext}
+              handleOnAnswerClick={handleOnAnswerClick}
+              score={score} 
+              lengthOfQuestionsArray={lengthOfQuestionsArray} 
+              questionsAll= {questionsAll} 
+              btnText={btnText} 
+              onStartBtnClick={onStartBtnClick}
+            />}
+          />
+        </Routes>
       </div>
     </indexContext.Provider>
   );

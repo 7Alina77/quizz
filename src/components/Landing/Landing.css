@@ -2,11 +2,11 @@
   box-sizing: border-box;
   position: relative;
   margin: 0 auto;
-  padding: 20px 40px;
+  padding: 30px 40px 50px;
   display: flex;
   justify-content: center;
-  height: 100vh;
-  background-image: url('../../../img/quizz.jpeg');
+  height: 100%;
+  background-image: url('../../img/quizz.jpeg');
   background-size: 500px 300px;
   background-position: center;
 }
@@ -28,7 +28,6 @@
   text-shadow: 1px 1px 1px rgba(38, 33, 43, 0.8);
   text-align: center;
 }
-
 
 .landing__title {
   margin: 0;

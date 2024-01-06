@@ -1,14 +1,18 @@
-import { Component } from 'react';
 import Button from '../Button/Button';
-import Landing from '../Landing/Landing';
+import Logo from '../Logo/Logo';
+import Navigation from '../Navigation/Navigation';
 import './Result.css';
-import {  BrowserRouter, Routes, Route, Link } from 'react-router-dom/dist';
 
 function Result({lengthOfQuestionsArray, score, btnText, onStartBtnClick}) {
   return (
     <section className='result'>
       <h1 className='result__title'>Your final score is: {score} of {lengthOfQuestionsArray} 	&#127881;</h1>
       <Button onStartBtnClick={onStartBtnClick} btnText={btnText}/>
+      <div className='result__auth'>
+        <p className='result__text'>Keen on playing quizzes?</p>
+        <Navigation />
+        <Logo />
+      </div>
     </section>
   )
 }
